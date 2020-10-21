@@ -1,1 +1,1 @@
-# Shopping-List-Challenge
+This repo contains starter files for the Shopping List App challenge.
