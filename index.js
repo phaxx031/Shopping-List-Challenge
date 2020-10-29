@@ -21,25 +21,15 @@ $('#js-shopping-list-form').submit(function(event) {
 });
 
 $(document).ready(function() {
-
-  $('#shopping-item-toggle').on('click', function() {
-    $('#shopping-item').toggleClass(shopping-item__checked, function() {
-
+  $('ul').on('click', '.shopping-item-toggle', function() {
       let buttonClicked = $(this);
       buttonClicked.closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
 
-
-  $('.shopping-item-delete').on('click', function() {
-    $('ul').children().remove('selected');
-  });
-
+  $('ul').on('click', '.shopping-item-delete', function() {
+      let buttonClicked = $(this);
+      buttonClicked.closest('li').remove('li');
+    });
 });
 
-
-/* putting delete instead of toggle breaks the very first jquery that make the add item button work for whatever reason...
-/* my thinking is target the delete button and when we click it, it triggers an event where we delete the current li although
-
-/* i am not totally sure how to target the current li... maybe use the this keyword - claudio
-
-/* last assignment below is making sure enter/return works so we dont have to always click add item
+//how to write event delegation for buttons above
